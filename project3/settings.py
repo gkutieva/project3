@@ -74,10 +74,24 @@ WSGI_APPLICATION = 'project3.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+
+# for mac
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+# windows 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'project3',
+        'USER': 'django',
+        'PASSWORD': 'yourpassword',
+        'HOST': 'localhost',
+        'PORT': ''
     }
 }
 
